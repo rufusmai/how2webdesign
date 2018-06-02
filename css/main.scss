@@ -12,16 +12,23 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
-s
+
 .align-center {
     text-align: center;
 }
+
 .align-right {
     text-align: right;
 }
+
 .align-left {
     text-align: left;
 }
@@ -35,11 +42,72 @@ nav {
     padding: 10px;
 }
 
+div {
+    &.text-container-grey {
+        padding: 10px;
+
+        width: auto;
+        height: auto;
+
+        background: rgb(242, 242, 242);
+
+        box-shadow: 0 0 5px;
+        border-radius: 20px;
+    }
+
+    &.text-container-white {
+        padding: 10px;
+
+        width: 300px;
+        height: auto;
+        background-color: white;
+
+        background: white;
+
+        box-shadow: 0 0 5px;
+        border-radius: 20px;
+    }
+
+    &.code-container {
+        padding: 1px;
+
+        text-align: center;
+        width: 250px;
+        height: 45px;
+        background-color: white;
+
+        background: white;
+
+        box-shadow: 0 0 5px;
+        border-radius: 20px;
+    }
+}
+
+button {
+    &.right {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    &.left {}
+
+    &.center {}
+}
+
 section {
-    padding: 50px 20px 50px 20px;
+    padding: 50px 10px 50px 50px;
 
     &.bg-light-grey {
         background-color: rgb(242, 242, 242);
+    }
+
+    &.bg-white {
+        background-color: white;
     }
 }
 
@@ -57,4 +125,3 @@ input {
         font-weight: 200;
     }
 }
-

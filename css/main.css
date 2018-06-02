@@ -11,23 +11,27 @@ body {
   font-family: 'Roboto Condensed', sans-serif; }
 
 /* line 15, ../../xampp/htdocs/homepage/css/main.scss */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0; }
 
-/* line 18, ../../xampp/htdocs/homepage/css/main.scss */
-s
+/* line 24, ../../xampp/htdocs/homepage/css/main.scss */
 .align-center {
   text-align: center; }
 
-/* line 22, ../../xampp/htdocs/homepage/css/main.scss */
+/* line 28, ../../xampp/htdocs/homepage/css/main.scss */
 .align-right {
   text-align: right; }
 
-/* line 25, ../../xampp/htdocs/homepage/css/main.scss */
+/* line 32, ../../xampp/htdocs/homepage/css/main.scss */
 .align-left {
   text-align: left; }
 
-/* line 29, ../../xampp/htdocs/homepage/css/main.scss */
+/* line 36, ../../xampp/htdocs/homepage/css/main.scss */
 nav {
   background: white;
   box-shadow: 0 0 100px -15px rgba(0, 0, 0, 0.5);
@@ -35,14 +39,57 @@ nav {
   width: 100%;
   padding: 10px; }
 
-/* line 38, ../../xampp/htdocs/homepage/css/main.scss */
+/* line 46, ../../xampp/htdocs/homepage/css/main.scss */
+div.text-container-grey {
+  padding: 10px;
+  width: auto;
+  height: auto;
+  background: #f2f2f2;
+  box-shadow: 0 0 5px;
+  border-radius: 20px; }
+
+/* line 58, ../../xampp/htdocs/homepage/css/main.scss */
+div.text-container-white {
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  background: white;
+  box-shadow: 0 0 5px;
+  border-radius: 20px; }
+
+/* line 71, ../../xampp/htdocs/homepage/css/main.scss */
+div.code-container {
+  padding: 1px;
+  text-align: center;
+  width: 250px;
+  height: 45px;
+  background-color: white;
+  background: white;
+  box-shadow: 0 0 5px;
+  border-radius: 20px; }
+
+/* line 87, ../../xampp/htdocs/homepage/css/main.scss */
+button.right {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; }
+
+/* line 102, ../../xampp/htdocs/homepage/css/main.scss */
 section {
-  padding: 50px 20px 50px 20px; }
-  /* line 41, ../../xampp/htdocs/homepage/css/main.scss */
+  padding: 50px 10px 50px 50px; }
+  /* line 105, ../../xampp/htdocs/homepage/css/main.scss */
   section.bg-light-grey {
     background-color: #f2f2f2; }
+  /* line 109, ../../xampp/htdocs/homepage/css/main.scss */
+  section.bg-white {
+    background-color: white; }
 
-/* line 47, ../../xampp/htdocs/homepage/css/main.scss */
+/* line 115, ../../xampp/htdocs/homepage/css/main.scss */
 input.global-find {
   padding: 10px;
   box-shadow: 0 0 5px #aaaaaa;
