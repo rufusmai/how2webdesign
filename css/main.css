@@ -42,7 +42,7 @@ nav {
 /* line 46, ../../xampp/htdocs/homepage/css/main.scss */
 div.text-container-grey {
   padding: 10px;
-  width: auto;
+  width: 300px;
   height: auto;
   background: #f2f2f2;
   box-shadow: 0 0 5px;
@@ -65,12 +65,11 @@ div.code-container {
   width: 250px;
   height: 45px;
   background-color: white;
-  background: white;
   box-shadow: 0 0 5px;
   border-radius: 20px; }
 
-/* line 87, ../../xampp/htdocs/homepage/css/main.scss */
-button.right {
+/* line 84, ../../xampp/htdocs/homepage/css/main.scss */
+button {
   border: none;
   color: white;
   padding: 15px 32px;
@@ -78,10 +77,16 @@ button.right {
   text-decoration: none;
   display: inline-block;
   font-size: 16px; }
+  /* line 93, ../../xampp/htdocs/homepage/css/main.scss */
+  button.right {
+    float: right; }
+  /* line 97, ../../xampp/htdocs/homepage/css/main.scss */
+  button.left {
+    float: left; }
 
 /* line 102, ../../xampp/htdocs/homepage/css/main.scss */
 section {
-  padding: 50px 10px 50px 50px; }
+  padding: 50px 50px 50px 50px; }
   /* line 105, ../../xampp/htdocs/homepage/css/main.scss */
   section.bg-light-grey {
     background-color: #f2f2f2; }

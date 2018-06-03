@@ -46,7 +46,7 @@ div {
     &.text-container-grey {
         padding: 10px;
 
-        width: auto;
+        width: 300px;
         height: auto;
 
         background: rgb(242, 242, 242);
@@ -76,31 +76,31 @@ div {
         height: 45px;
         background-color: white;
 
-        background: white;
-
         box-shadow: 0 0 5px;
         border-radius: 20px;
     }
 }
 
 button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
     &.right {
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+       float: right;
     }
 
-    &.left {}
-
-    &.center {}
+    &.left {
+        float: left;
+    }
 }
 
 section {
-    padding: 50px 10px 50px 50px;
+    padding: 50px 50px 50px 50px;
 
     &.bg-light-grey {
         background-color: rgb(242, 242, 242);
