@@ -6,94 +6,428 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="css/main.css" />
+
+    <style type="text/css">
+        #loadWindow {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 20px;
+
+            width: 100%;
+            overflow: auto;
+
+            justify-content: center;
+        }
+
+        #loadButton {
+            display: inherit;
+            padding: 15px 32px;
+
+            background: #2bb22b;
+            border: none;
+            border-radius: 10px;
+
+            text-align: center;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+            cursor: pointer;
+        }
+    </style>
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav>
-        <h1 class="align-center">Halbjahresarbeit</h1>
-    </nav>
+    <div class="header" style="background: url('../img/3dpolygon.png') center no-repeat;
+    background-size: cover">
+        Wie funktion<wbr>iert Web<wbr>design?
+        <button class="btn black round big" onclick="scrollToObject('layout');"><i class="fas fa-arrow-down fa-xs"></i></button>
+    </div>
 
-    <section class="bg-light-grey">
-        <form method="post">
-            <input name="search" class="global-find" type="text" placeholder="Stichwörter finden" autocorrect="off" />
-        </form>
-    </section>
-
-    <section class="bg-white">
-        <h1 class="align-center"> Buttons </h1>
-        <p class="align-center"> Hier finden sie verschiedene Arten um Buttons zu Designen und zu animieren.</p>
-    </section>
-
-
-    <!-- Grey -->
-    <section class="bg-light-grey">
-        <div class="text-container-white">
-            <h3 class="align-center">Farben und Ausehen</h3>
-            <p>
-                Buttons können verschiedene Farben haben,
-                <br> und auch verschieden ausehene.
-            </p>
-        </div>
-
-        <button class="left" style="position: relative; left: 480px; bottom: 110px; background-color: lightgreen;">Dummy</button>
-        <button class="left" style="position: relative; left: 235px; bottom: 110px;  background-color: lightblue;">Dummy</button>
-
-        <div class="code-container" style="float: left; position: relative; left: 115px; bottom: 50px;">
-            <p>Hier kommst das Code bespiel hin</p>
+    <section id="find" class="grey">
+        <div class="container">
+            <form id="global-find-form">
+                <input id="global-find" class="responsive" style="background: url('../img/search.svg') no-repeat scroll 15px 15px, white;
+        background-size: 25px;" name="search" list="sections" type="text" placeholder="Stichwörter finden" autocorrect="off" />
+                <datalist id="sections">
+                    <option value="layout" />
+                    <option value="responsive-design" />
+                    <option value="stylesheets" />
+                    <option value="buttons" />
+                    <option value="lists" />
+                    <option value="inputs" />
+                    <option value="modals" />
+                    <option value="icon-font" />
+                    <option value="pictures" />
+                </datalist>
+            </form>
         </div>
     </section>
 
-     <!-- White -->
-    <section class="bg-light-white">
-        <div class="text-container-grey" style="float: right;">
-            <h3 class="align-center">Farben und Ausehen</h3>
-            <p>
-                Buttons können verschiedene Farben haben,
-                <br> und auch verschieden ausehene.
-            </p>
+    <section id="layout">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Layout<br/>
+                        <small>Diese Seite verwendet ein "OnePage"-Layout. Das bedeutet alle Inhalte sind auf einer einzigen Seite dargestellt um dem Besucher die beste Übersicht zu bieten.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    Container, prozentuales padding
+                </div>
+                <div class="col-3">
+                    <button id="addBorderButton" class="btn-outline green" onclick="addBorders();">Alle Boderlinien hinzufügen</button>
+                    <button class="btn" onclick="removeBorders();">Alle Borderlinien entfernen</button>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <button class="right" style="position: relative; right: 55px; top: 5px; background-color: lightgreen;">Dummy</button>
-        <button class="right" style="position: relative; right: 65px; top: 5px;  background-color: lightblue;">Dummy</button>
-
-        <div class="code-container" style="float: right; position: relative; top: 65px; left: 185px">
-            <p>Hier kommst das Code bespiel hin</p>
+    <section id="responsive-design" class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-3" style="padding: 50px; display: flex; align-items: center;">
+                    <img src="img/responsive-web-design.png" style="width: 100%">
+                </div>
+                <div class="col-3">
+                    <h1>Responsive Design<br/>
+                        <small>"Responsive design" ist englisch und bedeuted ein sich anpassenes (wörtlich: antwortendes) Design. Damit ist die Anpassung des Layouts an die Bildschirmgrößen der verschiednen Endgeräte wie Smartphones, Tablets oder Laptops gemeint.</small>
+                    </h1>
+                    <br/> Egal auf welchem Gerät diese Seite geöffnet wird, sie wird immer einigermaßen lesbar präsentiert. Das liegt daran, dass hier ein Tabellen-Layout verwendet wird, das sich der Bildschirmgröße anpasst. Die einzelnen Zellen erkennst man, wenn man sich beim Abschnitt Layout die Borderlinien anzeigen lässt.<br/> Falls diese Seite also auf einem mobilen Gerät mit einer maximalen Breite von 720 Pixeln öffnest, werden die Spalten untereinander statt nebeneinander angezeigt. Beim öffnen auf einem mittelgroßen Gerät (wie z.B. einem Tablet) ergibt sich wieder eine andere Anordnung.<br/>
+                    <br/> Ein mobiles anpassendes (antwortendes) Design ist vorallem im Zeitalter von Smartphones und Tablets sehr wichtig, da die meißten Websitenaufrufe inzwischen von mobilen Geräten stammen.
+                </div>
+            </div>
         </div>
     </section>
 
-    <!--- White
-    <section class="bg-light-white">
-        <div class="text-container-white" style="position: absolute; left: 1575px">
-            <h3 class="align-center">Text-1</h3>
-            <p>
-                Buttons können verschiedene Farben haben,
-                <br> und auch verschieden ausehene.
-            </p>
-        </div>
-
-
-        <div class="code-container" style="position: relative; left: 1025px; bottom: 13px">
-            <p>Hier kommst das Code bespiel hin</p>
-        </div>
-    </section>
--->
-    <!-- Grey
-    <section class="bg-light-grey">
-        <div class="text-container-white" style="position: absolute">
-            <h3 class="align-center">Text-2</h3>
-            <p>
-                Buttons können verschiedene Farben haben,
-                <br> und auch verschieden ausehene.
-            </p>
-        </div>
-
-        <div class="code-container" style="position: relative; left: 560px; bottom: 13px">
-            <p>Hier kommst das Code bespiel hin</p>
+    <section id="stylesheets">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Stylesheets<br/>
+                        <small>Stylesheets enthalten alle Regeln für das Design der Elemente der Homepage. Das Webdesign entsteht durch die Umsetzung der Regeln und das schlussendliche rendern der Seite durch den Browser.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    Bis vor kurzem hatten die meisten Browser verschiedene Syntaxe für die genannten Regeln. So musste das Stylesheet nicht nur eine, sondern bis zu vier Zeilen Code enthalten, die allerdings alle in der selben Funktion resultieren.<br/> Das führt natürlich zu einer längeren Ladezeit der Website, da der Browser vor jedem Aufruf das komplette Stylesheet herunterladen muss.<br/> Moderne Browser verwenden allerdings einheitliche Regeln, auf die diese Homepage unter anderem auch zugreift.<br/>
+                    <br/> Der Button "Stylesheet entfernen" entlädt alle Regeln um zu zeigen wie diese Seite komplett ohne irgendeine Designbearbeitung aussehen würde.
+                </div>
+                <div class="col-3">
+                    <div style="margin: 0 auto; display: flex; justify-content: center;">
+                        <button id="unloadButton" class="btn-outline red" onclick="unloadStylesheet();">Stylesheet entfernen</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    -->
 
+    <section id="buttons" class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <h1>Buttons &amp; Events<br/>
+                        <small>Buttons werden verwendet um andere Dinge, wie weitere Homepages oder Elemente der aktuellen Seite zu verlinken. Wie auch andere Elemente können Buttons bei verschiedenen Interaktionen des Besuchers unterschiedlich aussehen.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn red">Roter Button</button>
+                    <button class="btn green">Gr&uuml;ner Button</button>
+                    <button class="btn blue">Blauer Button</button>
+                    <br/>
+                    <button class="btn-outline red">Roter Button</button>
+                    <button class="btn-outline green">Gr&uuml;ner Button</button>
+                    <button class="btn-outline blue">Blauer Button</button>
+                    <hr/>
+                    <button class="btn">Normaler Button</button>
+                    <button class="btn-outline">Normaler Button</button>
+                    <hr/>
+                    <button class="btn round red"><i class="fas fa-times"></i></button>
+                    <button class="btn round yellow"><i class="fas fa-exclamation-triangle"></i></button>
+                    <button class="btn round green"><i class="fas fa-check"></i></button>
+                    <button class="btn round blue"><i class="fas fa-info"></i></button>
+                    <button class="btn round"><i class="fas fa-question"></i></button>
+                    <br/>
+                    <button class="btn-outline round red"><i class="fas fa-times"></i></button>
+                    <button class="btn-outline round yellow"><i class="fas fa-exclamation-triangle"></i></button>
+                    <button class="btn-outline round green"><i class="fas fa-check"></i></button>
+                    <button class="btn-outline round blue"><i class="fas fa-info"></i></button>
+                    <button class="btn-outline round"><i class="fas fa-question"></i></button>
+                </div>
+                <div class="col-3">
+                    Generell existieren in der Web-Programmiersprache HTML mehrere Ereignisse (States) die Auswirkunken auf das Aussehen von Elementen haben können. Betroffene Elemente sind zum Beispiel Eingabefelder oder Buttons.<br/> Die wichtigsten Events sind im folgenden aufgelistet:
+                    <ul>
+                        <li>
+                            <b>Hover State</b>: Mit dem Hover Status ist das ziehen der Maus über das betroffene Element gemeint. Hierbei ist es sinnvoll, dass dem Besucher durch ein anderes Styling klar gemacht wird, dass der Button über den er "hovert" eine Funktion hat
+                        </li>
+                        <li>
+                            <b>Focus State</b>: Ein Element befindet sich im Focus Status nachdem es der Besucher angeklickt hat. Sobald etwas anderes auf der Homepage angeklickt wird, kehrt das Element zu seinem ursprünglichen Status zurück.
+                        </li>
+                        <li>
+                            <b>Visited State</b>: Dieser Status wird häufiger bei klassischen Links als bei Buttons verwendet. Nach dem öffnen eines Links, wird dieser meist lila anstatt blau gefärbt, um dem Besucher zu zeigen, dass er ihn schon angeklickt hat. Als Beispiel dient der Link zum Impressum am unteren Ende der Seite.
+                        </li>
+                    </ul>
+
+                    Mehr zur Bedeutung der Farben und Icons (Piktogramme) ist im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('fonts').scrollIntoView();">Fonts &amp; Colors</span> beschrieben
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pictures" style="background: linear-gradient(rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.53)), url('img/3dpolygon.png') no-repeat fixed center; background-size: cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Pictures<br/>
+                        <small>Bilder und vorallem Hintergrundbilder lenken die Aufmerksamkeit vorerst auf sich und vermitteln somit dem Besucher eine gewisse Wertigkeit, die sich positiv auf die Meinung zur betrachteten Homepage auswirkt.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                        Das Full-Range Bild mit einer 100% Höhe am Anfang dieser Homepage täuscht dem Besucher erst vor, dass die Homepage nur aus diesem einen Bild bestehe und lenkt den Fokus voll und ganz auf die Frage, welche das Thema dieser Seite ist.<br/>
+                        <br/>
+                        Durch den hier verwendeten "Parallax"-Effekt, der das Hintergrundbild still bleiben lässt, während die restliche Homepage weiter scrollt, lässt sich eine 3D-Struktur erzeugen, die die Aufmerksam ebenfalls auf die gewünschte Sektion der Homepage zieht.
+                </div>
+                <div class="col-3">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forms" class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="col-3" style="align-content: center; justify-content: center; al">
+                        <form id="contact-form" method="post">
+                            <div class="row form-group">
+                                <div class="col-1" style="text-align: right">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-5">
+                                    <input class="responsive" type="text" name="name" required />
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-1" style="text-align: right">
+                                    <label>E-Mail</label>
+                                </div>
+                                <div class="col-5">
+                                    <input class="responsive" type="email" name="email" style="position: static;" required />
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-1" style="text-align: right">
+                                    <label>Adresse</label>
+                                </div>
+                                <div class="col-5">
+                                    <textarea class="responsive" name="adress" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <input type="submit" class="btn blue" value="Visitenkarte erstellen" />
+                            <input type="reset" class="btn-outline" value="Alles Löschen" />
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h1>Forms<br/>
+                        <small>Formulare ermöglichen es dem Besucher mithilfe von Eingabefeldern Daten einzugeben, die dann z.B. durch das klicken eines Buttons weiterverarbeitet werden können.</small>
+                    </h1>
+                    <br/> Um zu verstehen wie ein Formular funktioniert, können die gegebenen Felder mit beliebigen Daten ausgefüllt werden. Nach einem Klick auf Visitenkarte erstellen, wird eine digitale Visitenkarte basierend auf den eingegebenen Daten erstellt.<br/>
+                    <br/> Die Visitenkarte wird mithilfe eines <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">Modals</span> dargstellt.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modals">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Modals<br/>
+                        <small>Modals werden verwendet um dem Besucher eine wichtige Nachricht, oder ein Kontextmen&uuml; anzuzeigen, das nicht in den restlichen Aufbau des Seite passt. Durch die Platzierung oberhalb der Homepage, erlangt es sofort Aufmerksamkeit.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    Ohne die Entwicklung des Webdesigns würde der Inhalt des Modals einfach am unteren Rand der Seite angezeigt werden. Erst eine Kombination aus Styling-Regeln macht es möglich, dass der Inhalt oberhalb der restlichen Seite erscheint.<br/>
+                    <br/> Mehr dazu wie das Styling in der Webentwicklung funktioniert und wie es aussehen würde alle Styling-Regeln zu entfernen ist im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheets</span> beschrieben
+                </div>
+                <div class="col-3">
+                    <div style="margin: 0 auto; display: flex; justify-content: center;">
+                        <button class="btn blue" onclick="showModal('modal');">Modal erstellen</button>
+                        <button class="btn-outline blue" onclick="showModal('smallModal');">Kleines Modal erstellen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fonts" class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-3">
+                    <h1>Fonts &amp; Colors<br/>
+                        <small>Das wichtigste der Homepage sind Texte bzw. Überschriften. Damit diese für den Betrachter interessant aber auch übersichtlich und einheitlich dargestellt werden, sind passende Schriftarten nötig.</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h1>Überschrift 1 <small>Untertitel</small></h1>
+                    <h2>Überschrift 2 <small>Untertitel</small></h2>
+                    <h3>Überschrift 3 <small>Untertitel</small></h3>
+                    <h4>Überschrift 4 <small>Untertitel</small></h4>
+                    <h5>Überschrift 5 <small>Untertitel</small></h5>
+                    <h6>Überschrift 6 <small>Untertitel</small></h6>
+
+                    <br/>
+                    <p>
+                        Absatz-Text<br/>
+                        <span class="text-red" style="font-weight: 700">Roter Text</span>&nbsp;&nbsp;
+                        <span class="text-yellow" style="font-weight: 700">Gelber Text</span>&nbsp;&nbsp;
+                        <span class="text-green" style="font-weight: 700">Grüner Text</span>&nbsp;&nbsp;
+                        <span class="text-blue" style="font-weight: 700">Blauer Text</span>
+                        <br/>
+                        <span style="text-decoration: underline">Unterstrichener Text</span><br/>
+                        <span style="font-style: italic">Kursiver Text</span><br/>
+                        <span style="font-weight: 700">Fetter Text</span><br/>
+                        <span style="text-decoration: line-through">Durchgestrichener Text</span>
+                    </p>
+                </div>
+                <div class="col-3">
+                    Diese Homepage verwendet die Schriftart <span style="font-weight: 700">Roboto Condensed</span>. Diese Schriftart wurde von Google entwickelt und wird auch im Smartphone-Betriebssystem Android verwendet. Sie fällt vorallem durch ihre horizontale Stauchung auf.<br/>
+                    <br/>
+                    Auf der ganzen Homepage verteilt werden vier extra ausgesuchte Hauptfarben verwendet (siehe unter "Absatz-Text" oder <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('buttons').scrollIntoView();">Buttons</span>). Diese machen dem Besucher unterbewusst klar welche Eigenschaften das Wort oder der Button hat. Folgende Farben werden verwendet:<ul>
+                        <li>
+                            <b>Rot</b>: Als Farbe für Gefahr bzw. Auffälligkeit
+                        </li>
+                        <li>
+                            <b>Gelb</b>: Als Farbe für eine mildere Gefahr bzw. Warnung
+                        </li>
+                        <li>
+                            <b>Grün</b>: Als Farbe für eine vollkommen legitime Funktion
+                        </li>
+                        <li>
+                            <b>Blau</b>: Als Informations- oder Aktionsfarbe
+                        </li>
+                        <li>
+                            <b>Grau</b>: Als Standartfarbe
+                        </li>
+                    </ul>
+                    <br/>
+                    Icon-Fonts, also Schriftarten die aus Piktogrammen bestehen, helfen dabei bestimmte Funktionen von Dingen direkt zu verstehen und zeigen damit bestimmte Funktionen unbewusst intuitiver. Anwendungsbeispiele sind im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('buttons').scrollIntoView();">Buttons</span>.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pictures">
+        <div class="container">
+            <div class="row" style="text-align: center">
+                <div class="col-1"></div>
+                <div class="col-4">
+                    <h1 style="margin-bottom: 30px;">
+                        Sourcecode<br/>
+                        <small>Die auf dieser Homepage enthaltenen Texte und sämtliche Quellcodes sind komplett selber geschrieben worden und enthalten keinen fremden Inhalte. Externe Bilder und Icons zählen natürlich nicht dazu.</small>
+                    </h1>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="bowl red">HTML</div>
+                            Jede Homepage besteht mindestens aus einem <span class="text-red">HTML Dokument</span>. HTML ist hierbei die Programmiersprache die dem Browser sagt, welche Elemente er anzeigen soll.
+                        </div>
+                        <div class="col-2">
+                            <div class="bowl green">CSS</div>
+                            Um diese anschließend zu designen, um sie dem Besucher gut darzustellen ist ein weiteres Dokument nötig, aus dem hervorgeht wie die Elemente dargestellt werden sollen. Wie die Seite ohne dieses <span class="text-green">CSS Dokument</span> aussieht zeigt sich durch einen Klick auf den Button <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheet entfernen</span>.
+                        </div>
+                        <div class="col-2">
+                            <div class="bowl blue">JS</div>
+                            Zuletzt ist es nötig den erstellten Elementen Funktionen hinzuzufügen. Dazu zählen z.B. das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">öffnen eines Modals</span> oder das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('layout').scrollIntoView();">Enfernen und Hinzufügen von Borderlinien</span>. Diese Funktionen werden in der Programmiersprache JavaScript (JS) geschrieben und in einem <span class="text-blue">JS Dokument</span> gespeichert.
+                        </div>
+                    </div>
+
+                    <br/> Der Quellcode dieser Homepage ist öffentlich einsehbar auf dem Quellcode-Verwaltungs-Dienst "Github". Interessant sind folgende Dateien:<br/>
+                    <br/>
+                    <span class="text-red">HTML Code: <span style="font-weight: 700">index.html</span></span><br/>
+                    <span class="text-green">CSS Code: <span style="font-weight: 700">css / main.scss</span></span><br/>
+                    <span class="text-blue">JS Code: <span style="font-weight: 700">js / main.js</span></span>
+                    <br/>
+
+                    <a class="btn black" style="margin-top: 50px;">
+                        <i class="fab fa-github"></i> Quellcode auf Github ansehen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    &copy; Rufus Maiwald 2018
+                </div>
+                <div class="col-3" style="text-align: right">
+                    <a href="http://impressum.rmlk-verwaltung.de/" target="_blank">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loadWindow">
+        <button id="loadButton" onclick="loadStylesheet();">Stylesheet wieder laden</button>
+    </div>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('contact-modal');"><i class="fas fa-times"></i></span>
+            <h2 style="margin-bottom: 40px">Deine Visitenkarte</h2>
+
+            <div class="row">
+                <div class="col" style="padding: 0 20px">
+                    <i class="fas fa-user-circle fa-8x" style="color: grey"></i>
+                </div>
+                <div class="col-3">
+                    <b>Name: </b><span id="contact-name">Loading</span><br/><br/>
+                    <b>E-Mail: </b><span id="contact-mail">Loading</span><br/><br/>
+                    <b>Adresse: </b><br/>
+                    <span id="contact-adress">Loading</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('modal');"><i class="fas fa-times"></i></span>
+            <p>Normales Modal</p>
+        </div>
+    </div>
+
+    <div id="smallModal" class="modal light">
+        <div class="modal-content small">
+            <span class="close" onclick="hideModal('smallModal');"><i class="fas fa-times"></i></span>
+            <p>Aktions Modal</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 
