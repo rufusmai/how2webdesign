@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <style type="text/css">
         #loadWindow {
@@ -51,18 +52,18 @@
     <section id="find" class="grey">
         <div class="container">
             <form id="global-find-form">
-                <input id="global-find" class="responsive" style="background: url('../img/search.svg') no-repeat scroll 15px 15px, white;
-        background-size: 25px;" name="search" list="sections" type="text" placeholder="Stichwörter finden" autocorrect="off" />
+                <input id="global-find" class="responsive" style="background: url('/img/search.svg') no-repeat scroll 15px 15px, white;
+        background-size: 25px;" name="search" list="sections" type="text" placeholder="Stichwörter finden"/>
                 <datalist id="sections">
-                    <option value="layout" />
-                    <option value="responsive-design" />
-                    <option value="stylesheets" />
-                    <option value="buttons" />
-                    <option value="pictures" />
-                    <option value="forms" />
-                    <option value="modals" />
-                    <option value="fonts" />
-                    <option value="sourcecode" />
+                    <option value="layout"></option>
+                    <option value="responsive-design"></option>
+                    <option value="stylesheets"></option>
+                    <option value="buttons"></option>
+                    <option value="pictures"></option>
+                    <option value="forms"></option>
+                    <option value="modals"></option>
+                    <option value="fonts"></option>
+                    <option value="sourcecode"></option>
                 </datalist>
             </form>
         </div>
@@ -79,7 +80,10 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    Container, prozentuales padding
+                    Der Inhalt wird mittig mithilfe eines Abstands zu beiden Seiten dargestellt. Dies stärkt die Übersichtlichkeit und richtet den Fokus direkt auf das Wichtige.
+                    <br/> Je schmaler der Bildschirm, desto kleiner der Seitenabstand. Das erleichtert die Lesbarkeit auf kleinen Endgeräten enorm. Mehr dazu bei <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('responsive-design').scrollIntoView();">Responsive Design</span>.<br/>
+                    <br/> Das ganze Layout ist auf mehreren, in einander platzierten HTML Bausteinen aufgebaut. Diese erhalten ihre eigenen Designregeln und sind mehrfach verwendbar.
+                    <br/> Um alle diese Bausteine sichtbar zu machen, lassen sich mit dem Button rechts Ränder zu den Elementen hinzufügen.
                 </div>
                 <div class="col-3">
                     <button id="addBorderButton" class="btn-outline green" onclick="addBorders();">Alle Boderlinien hinzufügen</button>
@@ -97,10 +101,10 @@
                 </div>
                 <div class="col-3">
                     <h1>Responsive Design<br/>
-                        <small>"Responsive design" ist englisch und bedeuted ein sich anpassenes (wörtlich: antwortendes) Design. Damit ist die Anpassung des Layouts an die Bildschirmgrößen der verschiednen Endgeräte wie Smartphones, Tablets oder Laptops gemeint.</small>
+                        <small>"Responsive design" ist englisch und bedeutet ein sich anpassendes (wörtlich: antwortendes) Design. Damit ist die Anpassung des Layouts an die Bildschirmgrößen der verschiedenen Endgeräte wie Smartphones, Tablets oder Laptops gemeint.</small>
                     </h1>
-                    <br/> Egal auf welchem Gerät diese Seite geöffnet wird, sie wird immer einigermaßen lesbar präsentiert. Das liegt daran, dass hier ein Tabellen-Layout verwendet wird, das sich der Bildschirmgröße anpasst. Die einzelnen Zellen erkennst man, wenn man sich beim Abschnitt Layout die Borderlinien anzeigen lässt.<br/> Falls diese Seite also auf einem mobilen Gerät mit einer maximalen Breite von 720 Pixeln öffnest, werden die Spalten untereinander statt nebeneinander angezeigt. Beim öffnen auf einem mittelgroßen Gerät (wie z.B. einem Tablet) ergibt sich wieder eine andere Anordnung.<br/>
-                    <br/> Ein mobiles anpassendes (antwortendes) Design ist vorallem im Zeitalter von Smartphones und Tablets sehr wichtig, da die meißten Websitenaufrufe inzwischen von mobilen Geräten stammen.
+                    <br/> Egal, auf welchem Gerät diese Seite geöffnet wird, sie wird immer einigermaßen lesbar präsentiert. Das liegt daran, dass hier ein Tabellen-Layout verwendet wird, das sich der Bildschirmgröße anpasst. Die einzelnen Zellen erkennt man, wenn man sich beim Abschnitt Layout die Borderlinien anzeigen lässt.<br/> Falls diese Seite also auf einem mobilen Gerät mit einer maximalen Breite von 720 Pixeln geöffnet wird, werden die Spalten untereinander statt nebeneinander angezeigt. Beim Öffnen auf einem mittelgroßen Gerät (wie z.B. einem Tablet) ergibt sich wieder eine andere Anordnung.<br/>
+                    <br/> Ein mobiles anpassendes (antwortendes) Design ist vor allem im Zeitalter von Smartphones und Tablets sehr wichtig, da die meisten Website-Aufrufe inzwischen von mobilen Geräten stammen.
                 </div>
             </div>
         </div>
@@ -111,14 +115,14 @@
             <div class="row">
                 <div class="col-3">
                     <h1>Stylesheets<br/>
-                        <small>Stylesheets enthalten alle Regeln für das Design der Elemente der Homepage. Das Webdesign entsteht durch die Umsetzung der Regeln und das schlussendliche rendern der Seite durch den Browser.</small>
+                        <small>Stylesheets enthalten alle Regeln für das Design der Elemente der Homepage. Das Webdesign entsteht durch die Umsetzung der Regeln und das schlussendliche Rendern der Seite durch den Browser.</small>
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    Bis vor kurzem hatten die meisten Browser verschiedene Syntaxe für die genannten Regeln. So musste das Stylesheet nicht nur eine, sondern bis zu vier Zeilen Code enthalten, die allerdings alle in der selben Funktion resultieren.<br/> Das führt natürlich zu einer längeren Ladezeit der Website, da der Browser vor jedem Aufruf das komplette Stylesheet herunterladen muss.<br/> Moderne Browser verwenden allerdings einheitliche Regeln, auf die diese Homepage unter anderem auch zugreift.<br/>
-                    <br/> Der Button "Stylesheet entfernen" entlädt alle Regeln um zu zeigen wie diese Seite komplett ohne irgendeine Designbearbeitung aussehen würde.
+                    Bis vor kurzem hatten die meisten Browser verschiedene Syntaxen für die genannten Regeln. So musste das Stylesheet nicht nur eine, sondern bis zu vier Zeilen Code enthalten, die allerdings alle in der selben Funktion resultieren.<br/> Das führt natürlich zu einer längeren Ladezeit der Website, da der Browser vor jedem Aufruf das komplette Stylesheet herunterladen muss.<br/> Moderne Browser verwenden allerdings einheitliche Regeln, auf die diese Homepage unter anderem auch zugreift.<br/>
+                    <br/> Der Button "Stylesheet entfernen" entlädt alle Regeln, um zu zeigen, wie diese Seite komplett ohne irgendeine Designbearbeitung aussehen würde.
                 </div>
                 <div class="col-3">
                     <div style="margin: 0 auto; display: flex; justify-content: center;">
@@ -134,7 +138,7 @@
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-3">
-                    <h1>Buttons &amp; Events<br/>
+                    <h1>Buttons &amp; States<br/>
                         <small>Buttons werden verwendet um andere Dinge, wie weitere Homepages oder Elemente der aktuellen Seite zu verlinken. Wie auch andere Elemente können Buttons bei verschiedenen Interaktionen des Besuchers unterschiedlich aussehen.</small>
                     </h1>
                 </div>
@@ -165,16 +169,16 @@
                     <button class="btn-outline round"><i class="fas fa-question"></i></button>
                 </div>
                 <div class="col-3">
-                    Generell existieren in der Web-Programmiersprache HTML mehrere Ereignisse (States) die Auswirkunken auf das Aussehen von Elementen haben können. Betroffene Elemente sind zum Beispiel Eingabefelder oder Buttons.<br/> Die wichtigsten Events sind im folgenden aufgelistet:
+                    Generell existieren in der Web-Programmiersprache HTML mehrere Ereignisse (States), die Auswirkunken auf das Aussehen von Elementen haben können. Betroffene Elemente sind zum Beispiel Eingabefelder oder Buttons.<br/> Die wichtigsten States sind im folgenden aufgelistet:
                     <ul>
                         <li>
-                            <b>Hover State</b>: Mit dem Hover Status ist das ziehen der Maus über das betroffene Element gemeint. Hierbei ist es sinnvoll, dass dem Besucher durch ein anderes Styling klar gemacht wird, dass der Button über den er "hovert" eine Funktion hat
+                            <b>Hover State</b>: Mit dem Hover Status ist das Ziehen der Maus über das betroffene Element gemeint. Hierbei ist es sinnvoll, dass dem Besucher durch ein anderes Styling klar gemacht wird, dass der Button über den er "hovert" eine Funktion hat
                         </li>
                         <li>
                             <b>Focus State</b>: Ein Element befindet sich im Focus Status nachdem es der Besucher angeklickt hat. Sobald etwas anderes auf der Homepage angeklickt wird, kehrt das Element zu seinem ursprünglichen Status zurück.
                         </li>
                         <li>
-                            <b>Visited State</b>: Dieser Status wird häufiger bei klassischen Links als bei Buttons verwendet. Nach dem öffnen eines Links, wird dieser meist lila anstatt blau gefärbt, um dem Besucher zu zeigen, dass er ihn schon angeklickt hat. Als Beispiel dient der Link zum Impressum am unteren Ende der Seite.
+                            <b>Visited State</b>: Dieser Status wird häufiger bei klassischen Links als bei Buttons verwendet. Nach dem Öffnen eines Links wird dieser meist lila anstatt blau gefärbt, um dem Besucher zu zeigen, dass er ihn schon angeklickt hat. Als Beispiel dient der Link zum Impressum am unteren Ende der Seite.
                         </li>
                     </ul>
 
@@ -189,15 +193,15 @@
             <div class="row">
                 <div class="col-3">
                     <h1>Pictures<br/>
-                        <small>Bilder und vorallem Hintergrundbilder lenken die Aufmerksamkeit vorerst auf sich und vermitteln somit dem Besucher eine gewisse Wertigkeit, die sich positiv auf die Meinung zur betrachteten Homepage auswirkt.</small>
+                        <small>Bilder und vor allem Hintergrundbilder lenken die Aufmerksamkeit vorerst auf sich und vermitteln somit dem Besucher eine gewisse Wertigkeit, die sich positiv auf die Meinung zur betrachteten Homepage auswirkt.</small>
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                        Das Full-Range Bild mit einer 100% Höhe am Anfang dieser Homepage täuscht dem Besucher erst vor, dass die Homepage nur aus diesem einen Bild bestehe und lenkt den Fokus voll und ganz auf die Frage, welche das Thema dieser Seite ist.<br/>
+                        Das Full-Range Bild mit einer 100% Höhe am Anfang dieser Homepage täuscht dem Besucher erst vor, dass die Homepage nur aus diesem einen Bild besteht und lenkt den Fokus voll und ganz auf die Frage, welches das Thema dieser Seite ist.<br/>
                         <br/>
-                        Durch den hier verwendeten "Parallax"-Effekt, der das Hintergrundbild still bleiben lässt, während die restliche Homepage weiter scrollt, lässt sich eine 3D-Struktur erzeugen, die die Aufmerksam ebenfalls auf die gewünschte Sektion der Homepage zieht.
+                        Durch den hier verwendeten "Parallax"-Effekt, der das Hintergrundbild still bleiben lässt, während die restliche Homepage weiter scrollt, lässt sich eine 3D-Struktur erzeugen, die die Aufmerksamkeit ebenfalls auf die gewünschte Sektion der Homepage zieht.
                 </div>
                 <div class="col-3">
 
@@ -243,10 +247,10 @@
                 </div>
                 <div class="col-3">
                     <h1>Forms<br/>
-                        <small>Formulare ermöglichen es dem Besucher mithilfe von Eingabefeldern Daten einzugeben, die dann z.B. durch das klicken eines Buttons weiterverarbeitet werden können.</small>
+                        <small>Formulare ermöglichen dem Besucher mithilfe von Eingabefeldern Daten einzugeben, die dann z.B. durch das Klicken eines Buttons weiterverarbeitet werden können.</small>
                     </h1>
-                    <br/> Um zu verstehen wie ein Formular funktioniert, können die gegebenen Felder mit beliebigen Daten ausgefüllt werden. Nach einem Klick auf Visitenkarte erstellen, wird eine digitale Visitenkarte basierend auf den eingegebenen Daten erstellt.<br/>
-                    <br/> Die Visitenkarte wird mithilfe eines <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">Modals</span> dargstellt.
+                    <br/> Um zu verstehen wie ein Formular funktioniert, können die gegebenen Felder mit beliebigen Daten ausgefüllt werden. Nach einem Klick auf "Visitenkarte erstellen", wird eine digitale Visitenkarte basierend auf den eingegebenen Daten erstellt.<br/>
+                    <br/> Die Visitenkarte wird mithilfe eines <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">Modals</span> dargestellt.
                 </div>
             </div>
         </div>
@@ -257,14 +261,14 @@
             <div class="row">
                 <div class="col-3">
                     <h1>Modals<br/>
-                        <small>Modals werden verwendet um dem Besucher eine wichtige Nachricht, oder ein Kontextmen&uuml; anzuzeigen, das nicht in den restlichen Aufbau des Seite passt. Durch die Platzierung oberhalb der Homepage, erlangt es sofort Aufmerksamkeit.</small>
+                        <small>Modals werden verwendet um dem Besucher eine wichtige Nachricht oder ein Kontextmen&uuml; anzuzeigen, das nicht in den restlichen Aufbau der Seite passt. Durch die Platzierung oberhalb der Homepage erlangt es sofort Aufmerksamkeit.</small>
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
                     Ohne die Entwicklung des Webdesigns würde der Inhalt des Modals einfach am unteren Rand der Seite angezeigt werden. Erst eine Kombination aus Styling-Regeln macht es möglich, dass der Inhalt oberhalb der restlichen Seite erscheint.<br/>
-                    <br/> Mehr dazu wie das Styling in der Webentwicklung funktioniert und wie es aussehen würde alle Styling-Regeln zu entfernen ist im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheets</span> beschrieben
+                    <br/> Mehr dazu, wie das Styling in der Webentwicklung funktioniert und wie es aussehen würde alle Styling-Regeln zu entfernen, ist im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheets</span> beschrieben
                 </div>
                 <div class="col-3">
                     <div style="margin: 0 auto; display: flex; justify-content: center;">
@@ -312,7 +316,7 @@
                     </p>
                 </div>
                 <div class="col-3">
-                    Diese Homepage verwendet die Schriftart <span style="font-weight: 700">Roboto Condensed</span>. Diese Schriftart wurde von Google entwickelt und wird auch im Smartphone-Betriebssystem Android verwendet. Sie fällt vorallem durch ihre horizontale Stauchung auf.<br/>
+                    Diese Homepage verwendet die Schriftart <span style="font-weight: 700">Roboto Condensed</span>. Diese Schriftart wurde von Google entwickelt und wird auch im Smartphone-Betriebssystem Android verwendet. Sie fällt vor allem durch ihre horizontale Stauchung auf.<br/>
                     <br/>
                     Auf der ganzen Homepage verteilt werden vier extra ausgesuchte Hauptfarben verwendet (siehe unter "Absatz-Text" oder <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('buttons').scrollIntoView();">Buttons</span>). Diese machen dem Besucher unterbewusst klar welche Eigenschaften das Wort oder der Button hat. Folgende Farben werden verwendet:<ul>
                         <li>
@@ -328,11 +332,11 @@
                             <b>Blau</b>: Als Informations- oder Aktionsfarbe
                         </li>
                         <li>
-                            <b>Grau</b>: Als Standartfarbe
+                            <b>Grau</b>: Als Standardfarbe
                         </li>
                     </ul>
                     <br/>
-                    Icon-Fonts, also Schriftarten die aus Piktogrammen bestehen, helfen dabei bestimmte Funktionen von Dingen direkt zu verstehen und zeigen damit bestimmte Funktionen unbewusst intuitiver. Anwendungsbeispiele sind im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('buttons').scrollIntoView();">Buttons</span>.
+                    Icon-Fonts, also Schriftarten die aus Piktogrammen bestehen, helfen dabei, bestimmte Funktionen von Dingen direkt zu verstehen und zeigen damit bestimmte Funktionen unbewusst intuitiver. Anwendungsbeispiele sind im Abschnitt <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('buttons').scrollIntoView();">Buttons</span>.
                 </div>
             </div>
         </div>
@@ -345,7 +349,7 @@
                 <div class="col-4">
                     <h1 style="margin-bottom: 30px;">
                         Sourcecode<br/>
-                        <small>Die auf dieser Homepage enthaltenen Texte und sämtliche Quellcodes sind komplett selber geschrieben worden und enthalten keinen fremden Inhalte. Externe Bilder und Icons zählen natürlich nicht dazu.</small>
+                        <small>Die auf dieser Homepage enthaltenen Texte und sämtliche Quellcodes sind komplett selber geschrieben worden und enthalten keine fremden Inhalte. Externe Bilder und Icons zählen natürlich nicht dazu.</small>
                     </h1>
                     <div class="row">
                         <div class="col-2">
@@ -354,11 +358,11 @@
                         </div>
                         <div class="col-2">
                             <div class="bowl green">CSS</div>
-                            Um diese anschließend zu designen, um sie dem Besucher gut darzustellen ist ein weiteres Dokument nötig, aus dem hervorgeht wie die Elemente dargestellt werden sollen. Wie die Seite ohne dieses <span class="text-green">CSS Dokument</span> aussieht zeigt sich durch einen Klick auf den Button <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheet entfernen</span>.
+                            Um diese anschließend zu designen und sie dem Besucher ästhetisch darzustellen ist ein weiteres Dokument nötig, aus dem hervorgeht wie das Aussehen der Elemente verändert werden soll. Wie die Seite ohne dieses <span class="text-green">CSS Dokument</span> aussieht zeigt sich durch einen Klick auf den Button <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('stylesheets').scrollIntoView();">Stylesheet entfernen</span>.
                         </div>
                         <div class="col-2">
                             <div class="bowl blue">JS</div>
-                            Zuletzt ist es nötig den erstellten Elementen Funktionen hinzuzufügen. Dazu zählen z.B. das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">öffnen eines Modals</span> oder das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('layout').scrollIntoView();">Enfernen und Hinzufügen von Borderlinien</span>. Diese Funktionen werden in der Programmiersprache JavaScript (JS) geschrieben und in einem <span class="text-blue">JS Dokument</span> gespeichert.
+                            Zuletzt ist es nötig den erstellten Elementen Funktionen hinzuzufügen. Dazu zählen z.B. das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('modals').scrollIntoView();">Öffnen eines Modals</span> oder das <span style="text-decoration: underline; font-weight: 700; cursor: pointer" onclick="document.getElementById('layout').scrollIntoView();">Enfernen und Hinzufügen von Borderlinien</span>. Diese Funktionen werden in der Programmiersprache JavaScript (JS) geschrieben und in einem <span class="text-blue">JS Dokument</span> gespeichert.
                         </div>
                     </div>
 
@@ -369,7 +373,7 @@
                     <span class="text-blue">JS Code: <span style="font-weight: 700">js / main.js</span></span>
                     <br/>
 
-                    <a href="https://github.com/rufusmaiwald/how2webdesign" class="btn black" style="margin-top: 50px;">
+                    <a href="https://github.com/rufusmaiwald/how2webdesign" class="btn black" style="margin-top: 50px;" target="_blank">
                         <i class="fab fa-github"></i> Quellcode auf Github ansehen
                     </a>
                 </div>
@@ -381,10 +385,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    &copy; Rufus Maiwald 2018
+                    &copy; <a href="https://rufusmaiwald.de" target="_blank" style="color: black;">Rufus Maiwald</a> <script>document.write(new Date().getFullYear())</script>
                 </div>
                 <div class="col-3" style="text-align: right">
-                    <a href="http://impressum.rmlk-verwaltung.de/" target="_blank">Impressum</a>
+                    <a href="https://rufusmaiwald.de/imprint" target="_blank">Impressum</a>
                 </div>
             </div>
         </div>
